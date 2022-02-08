@@ -1,0 +1,53 @@
+﻿/*
+ * EXT_INIT.c
+ *
+ * Created: 30/11/2021 10:59:14 م
+ *  Author: ascom
+ */ 
+#include "EXT_INT_CFG.h"
+#include "REG.h"
+#include "BIT_MATH.h"
+void M_ExtInt_1_Init(void){
+	SET_BIT(SREG,7);
+	SET_BIT(GICR,6);
+	#if SENSE_CONTROL==RISING_EDGE
+	SET_BIT(MCUCR,3);
+	SET_BIT(MCUCR,2);
+	#elif SENSE_CONTROL==FALLING_EDGE
+	SET_BIT(MCUCR,3);
+	CLR_BIT(MCUCR,2);
+	
+	#elif SENSE_CONTROL==LOGICAL
+	CLR_BIT(MCUCR,3);
+	SET_BIT(MCUCR,2);
+	
+	#elif SENSE_CONTROL==LOW_LEVEL
+	CLR_BIT(MCUCR,3);
+	CLR_BIT(MCUCR,2);
+	
+	#endif
+	
+}
+void M_ExtInt_0_Init(void){
+		SET_BIT(SREG,7);
+		SET_BIT(GICR,6);
+		#if SENSE_CONTROL==RISING_EDGE
+		SET_BIT(MCUCR,1);
+		SET_BIT(MCUCR,0);
+		#elif SENSE_CONTROL==FALLING_EDGE
+		SET_BIT(MCUCR,1);
+		CLR_BIT(MCUCR,0);
+		
+		#elif SENSE_CONTROL==LOGICAL
+		CLR_BIT(MCUCR,1);
+		SET_BIT(MCUCR,0);
+		
+		#elif SENSE_CONTROL==LOW_LEVEL
+		CLR_BIT(MCUCR,1);
+		CLR_BIT(MCUCR,0);
+		
+		#endif
+}
+/*void ExtInt_2_Init(void){
+	
+}*/

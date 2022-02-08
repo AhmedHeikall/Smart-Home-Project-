@@ -1,0 +1,69 @@
+﻿/*
+ * ADC_CFG.h
+ *
+ * Created: 19/11/2021 10:36:05 ص
+ *  Author: ascom
+ */ 
+
+
+#ifndef ADC_CFG_H_
+#define ADC_CFG_H_
+#include "DIO.h"
+
+#define VOLTAGE_REF_MODE		VoltageRefMode_2
+
+#define LEFT_ADJUST_MODE	    right_Adjust_Enable
+
+#define PIN_ADC		PA1
+
+/*#if PIN_ADC==PA0 
+	CLR_BIT(ADMUX,0);
+	CLR_BIT(ADMUX,1);
+	CLR_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA1
+	SET_BIT(ADMUX,0);
+	CLR_BIT(ADMUX,1);
+	CLR_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA2
+	CLR_BIT(ADMUX,0);
+	SET_BIT(ADMUX,1);
+	CLR_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA3
+	SET_BIT(ADMUX,0);
+	SET_BIT(ADMUX,1);
+	CLR_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA4
+	CLR_BIT(ADMUX,0);
+	CLR_BIT(ADMUX,1);
+	SET_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA5
+	SET_BIT(ADMUX,0);
+	CLR_BIT(ADMUX,1);
+	SET_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA6
+	CLR_BIT(ADMUX,0);
+	SET_BIT(ADMUX,1);
+	SET_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#elif PIN_ADC==PA7
+	SET_BIT(ADMUX,0);
+	SET_BIT(ADMUX,1);
+	SET_BIT(ADMUX,2);
+	CLR_BIT(ADMUX,3);
+	CLR_BIT(ADMUX,4);
+	#endif*/
+
+#endif /* ADC_CFG_H_ */
