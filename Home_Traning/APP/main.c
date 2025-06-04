@@ -2,7 +2,6 @@
  * Home_Traning.c
  *
  * Created: 17/11/2021 08:22:12 ص
- * Author : ascom
  */ 
 /*#include "FreeRTOS.h"
 #include "task.h"*/
@@ -99,7 +98,7 @@ int main (void){
 		 Key_Pad_reading=KeypadRead();
 		 
 		 /*this loop to copy the number in array and print it in lcd */
-		 while (i!=16 && Key_Pad_reading!='a') //كود كتابه كلمه واكمل عليها من غير ماامسح
+		 while (i!=16 && Key_Pad_reading!='a')  
 		 {
 			 if (Key_Pad_reading=='C' || Key_Pad_reading=='=')
 			 {
@@ -126,7 +125,7 @@ int main (void){
 			 }
 			 /*It is on the ground, because the first time I finish reading it from the air, and the user enters the number, 
 			 I will take this number and store it, and then leave the loop so that I can go to read again.*/
-			 break;//Lazim Tikon Bra i عشان اخروج من اللوب واروح اقرا تاني اشوفه داس اي
+			 break;
 			 
 		 }
 		 
@@ -260,9 +259,7 @@ int main (void){
 					}
 			    }else if(res==5){
 			    H_Lcd_Clear();
-			    H_Lcd_Write_String("DC OFF ");
-				// هنا مكان dc ي اشرف 
-				
+			    H_Lcd_Write_String("DC OFF ");				
 					u8 n=TEMP_S_READ();
 						if (n<27)
 						{
